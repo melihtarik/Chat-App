@@ -6,6 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Welcome To the Chat app</p>
+    <p>Yeni Nesil Chat App Hoş Geldiniz..</p>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      let socket = io();
+      socket.on("connect", () => {
+        console.log("Ben Bağlandım.");
+      });
+      socket.on("disconnect", (socket) => {
+        console.log("Bir kullanıcı çıkış yaptı..");
+      });
+    </script>
   </body>
 </html>
